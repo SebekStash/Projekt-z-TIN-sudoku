@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./game.css" rel="stylesheet" type="text/css">
+    <title>Sudoku</title>
+</head>
+<body>
+    <div id="mainBox">
+        <div id="titleSiadoku"><h1>Siadoku</h1></div>
+        <div id="mainMenu">
+            <input class="inputText" type="text" id="nickNameInput" placeholder="Podaj swoje imie">       
+            <button disabled class="button" id="difficultyEasy">Easy</button>
+            <button disabled class="button" id="difficultyMedium">Medium</button>
+            <button disabled class="button" id="difficultyHard">Hard</button>
+            <button disabled class="button" id="difficultyRandom">Losowo</button>
+            <button class="button" id="scoreTableButton">Pokaz tablice wynikow</button>
+            <button disabled class="button" id="difficultyTest">Test</button>
+        </div>
+
+        
+        <div id="highScores" class="hide"><h1>Scores</h1></div>
+        
+        <div id="gameContainer" class="hide"> 
+            <div id="options">
+                <div id="score">Wynik:</div>
+                <button class="button" id="showHintsButton">Pokaz wskazowki</button>
+                <button class="button" id="revealNumberButton" >Rozwiaz wybrane pole za darmo 1x</button>
+                <button class="button" id="showSolutionButton">Pokaz rozwiazanie 0p.</button>
+                
+            </div>
+            <div id="hintBox">
+                <tile id="1" class="tile hide">1</tile>
+                <tile id="2" class="tile hide">2</tile>
+                <tile id="3" class="tile hide">3</tile>
+                <tile id="4" class="tile hide">4</tile>
+                <tile id="5" class="tile hide">5</tile>
+                <tile id="6" class="tile hide">6</tile>
+                <tile id="7" class="tile hide">7</tile>
+                <tile id="8" class="tile hide">8</tile>
+                <tile id="9" class="tile hide">9</tile>
+            </div>       
+            <div id="board">
+                <tile id="00" class="tile"></tile>
+                <tile id="01" class="tile"></tile>
+                <tile id="02" class="tile"></tile>
+                <tile id="03" class="tile"></tile>
+                <tile id="04" class="tile"></tile>
+                <tile id="05" class="tile"></tile>
+                <tile id="06" class="tile"></tile>
+                <tile id="07" class="tile"></tile>
+                <tile id="08" class="tile"></tile>
+                <tile id="10" class="tile"></tile>
+                <tile id="11" class="tile"></tile>
+                <tile id="12" class="tile"></tile>
+                <tile id="13" class="tile"></tile>
+                <tile id="14" class="tile"></tile>
+                <tile id="15" class="tile"></tile>
+                <tile id="16" class="tile"></tile>
+                <tile id="17" class="tile"></tile>
+                <tile id="18" class="tile"></tile>
+                <tile id="20" class="tile"></tile>
+                <tile id="21" class="tile"></tile>
+                <tile id="22" class="tile"></tile>
+                <tile id="23" class="tile"></tile>
+                <tile id="24" class="tile"></tile>
+                <tile id="25" class="tile"></tile>
+                <tile id="26" class="tile"></tile>
+                <tile id="27" class="tile"></tile>
+                <tile id="28" class="tile"></tile>
+                <tile id="30" class="tile"></tile>
+                <tile id="31" class="tile"></tile>
+                <tile id="32" class="tile"></tile>
+                <tile id="33" class="tile"></tile>
+                <tile id="34" class="tile"></tile>
+                <tile id="35" class="tile"></tile>
+                <tile id="36" class="tile"></tile>
+                <tile id="37" class="tile"></tile>
+                <tile id="38" class="tile"></tile>
+                <tile id="40" class="tile"></tile>
+                <tile id="41" class="tile"></tile>
+                <tile id="42" class="tile"></tile>
+                <tile id="43" class="tile"></tile>
+                <tile id="44" class="tile"></tile>
+                <tile id="45" class="tile"></tile>
+                <tile id="46" class="tile"></tile>
+                <tile id="47" class="tile"></tile>
+                <tile id="48" class="tile"></tile>
+                <tile id="50" class="tile"></tile>
+                <tile id="51" class="tile"></tile>
+                <tile id="52" class="tile"></tile>
+                <tile id="53" class="tile"></tile>
+                <tile id="54" class="tile"></tile>
+                <tile id="55" class="tile"></tile>
+                <tile id="56" class="tile"></tile>
+                <tile id="57" class="tile"></tile>
+                <tile id="58" class="tile"></tile>
+                <tile id="60" class="tile"></tile>
+                <tile id="61" class="tile"></tile>
+                <tile id="62" class="tile"></tile>
+                <tile id="63" class="tile"></tile>
+                <tile id="64" class="tile"></tile>
+                <tile id="65" class="tile"></tile>
+                <tile id="66" class="tile"></tile>
+                <tile id="67" class="tile"></tile>
+                <tile id="68" class="tile"></tile>
+                <tile id="70" class="tile"></tile>
+                <tile id="71" class="tile"></tile>
+                <tile id="72" class="tile"></tile>
+                <tile id="73" class="tile"></tile>
+                <tile id="74" class="tile"></tile>
+                <tile id="75" class="tile"></tile>
+                <tile id="76" class="tile"></tile>
+                <tile id="77" class="tile"></tile>
+                <tile id="78" class="tile"></tile>
+                <tile id="80" class="tile"></tile>
+                <tile id="81" class="tile"></tile>
+                <tile id="82" class="tile"></tile>
+                <tile id="83" class="tile"></tile>
+                <tile id="84" class="tile"></tile>
+                <tile id="85" class="tile"></tile>
+                <tile id="86" class="tile"></tile>
+                <tile id="87" class="tile"></tile>
+                <tile id="88" class="tile"></tile>
+            </div> 
+        </div>
+        <button class="button hide" id="backToMenu">Powrot</button>
+    </div>
+<script defer src="./game.js"></script>
+</body>
+</html>

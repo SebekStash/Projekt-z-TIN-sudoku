@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Sriracha&display=swap');
+
+@color1:#009EFF;
+@color2:#00BEFF;
+@color3:#00D7E8;
+@color3:#00E9B9;
+@color4:#99F58A;
+@color5:#F9F871;
+@color6:#e8e846;
+@color7:#3d6feb;
+@color8:#164edc;
+@color9:#ffc25f;
+
+@button-background: rgba(0, 190, 255, 1);
+@button-gradient: linear-gradient(90deg, rgba(0, 190, 255, 1) 0%, rgba(0, 158, 255, 1) 100%);
+
+*{
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Sriracha', cursive;
+    text-align: center;
+    margin: 0;
+}
+body{
+  background-image: radial-gradient(circle, #f0f5ff, #c9daf2, #9ec0e4, #6ba7d5, #1490c6);
+}
+h1{
+  font-size: 5rem;
+  color: @color2;
+  text-shadow: 10px 5px 8px rgb(58, 102, 185);
+}
+.button{
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: @button-background;
+  background-image: @button-gradient;
+  border: 3px solid @color1; 
+  border-radius: 5px; 
+  &:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    box-shadow: 0 0 3px 3px @color2;
+    font-weight: bold;
+  }
+  &.clicked{
+    background-color:rgb(255, 197, 90);
+    background-image: none;
+    border: solid 3px @color6;
+    box-shadow: 0 0 6px 6px rgb(255, 218, 55);
+  }
+  &#backToMenu{
+    width: 400px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  } 
+}
+.inputText{
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border: solid 2px gray;
+  &:focus{
+    border: solid 3px @color1;
+    box-shadow: 0 0 3px 3px @color2;
+  }
+}
+#mainBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#mainMenu{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5px;
+  .button{
+    width: 100%;
+  }
+  .inputText{
+    width: 100%;
+  }
+  #difficultyTest{
+    background-color: white;
+    background-image: none;
+  }
+  #scoreTableButton{
+    background-color: #F9F871;
+    background-image: none;
+    border-color: #fefe54;
+    &:hover{
+      box-shadow: 0 0 3px 3px @color5;
+    }
+  }
+  &.hide{
+    display: none;
+  }
+}
+#highScores{
+  display: flex;
+  flex-direction: column;;
+  gap: 5px;
+  &.hide{
+    display: none;
+  }
+}
+#gameContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &.hide{
+    display: none;
+  }
+}
+#board {
+  height: 450px;
+  width: 450px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  display: grid;
+  background-color: #009dff45;
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);  
+}
+.tile{
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background-color: rgb(212, 243, 255);
+  border: solid 1px rgb(169, 194, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &.startTile{
+    background-color: @color2;
+    border: solid 3px @color1;
+    border-radius: 5px;
+  }
+  &.horizontalLine{
+    border-bottom: 3px solid rgb(56, 131, 201);
+  }
+  &.verticalLine{
+    border-right: 3px solid rgb(56, 131, 201);
+  }
+  &.revealedNumber{
+    background-color: @color4;
+    border-color: @color3;
+  }
+  &.selected{
+    font-weight: bold;
+    background-color: @color5;
+    border: solid 1px @color6;
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+    &.startTile{
+      background-color: @color7;
+      border-color: @color8;
+    }
+    &.filledTile{
+      background-color:@color9;
+      border-color: orange;
+    }
+  } 
+}
+#hintBox{
+      width: 450px;
+      height: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+      margin-top: 30px;
+      
+      .tile{
+        background-color: @color4;
+        border-radius: 5px;
+        border: solid 3px rgb(21, 183, 94);
+      
+        margin-left: 1px;
+      }  
+      .hide{
+        display: none;
+      }
+}
+#score{
+  font-size: 50px;
+  color: @color1;
+  text-shadow: 5px 5px 8px rgb(58, 102, 185);
+}
+.hide{
+  display: none;
+}
